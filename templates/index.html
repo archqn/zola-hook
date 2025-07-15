@@ -53,13 +53,12 @@
         </div>
         {% endif %}
         {% if blog.pages %}
-        <h2>Recent posts</h2>
-        <ul>
-            {% for post in blog.pages | slice(end=20) %}
-            <li><a href="{{ post.permalink }}">{{ post.title }}</a></li>
-            {% endfor %}
-        </ul>
-        <p><a href="{{ blog.permalink }}">Archive</a></p>
+        <h2>Lucas Jia</h2>
+        <p>Hi! I'm an EE undergrad at UC Santa Barbara. </p>
+        <p> 
+            Currently, I'm researching LLM Fine-tuning, LLMs for Analog/Mixed-Signal Circuit Optimization, and ML applications in Space Physics. 
+        </p>
+        <p><a href="{{ blog.permalink }}">Pages</a></p>
         {% endif %}
     </main>
     {% endif %}
