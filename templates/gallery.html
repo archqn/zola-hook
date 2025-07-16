@@ -1,0 +1,26 @@
+{% extends "page.html" %}
+
+{% block content %}
+<h1 class="post-title">{{ page.title }}</h1>
+
+{% if page.description %}
+<p class="description">{{ page.description | safe }}</p>
+{% endif %}
+
+<div class="portfolio-grid">
+    {% for item in page.extra.items %}
+    <div class="portfolio-item">
+        <a href="{{ item.full }}" target="_blank">
+            {% set thumbnail_img = resize_image(path=item.thumb | default(value=item.full), width=300, height=200, op="fill", format="webp") %}
+            <img src="{{ thumbnail_img.url }}" alt="{{ item.alt }}">
+        </a>
+        {% if item.title %}
+        <h3 class="item-title">{{ item.title }}</h3>
+        {% endif %}
+        {% if item.description %}
+        <p class="item-description">{{ item.description | safe }}</p>
+        {% endif %}
+    </div>
+    {% endfor %}
+</div>
+{% endblock content %}

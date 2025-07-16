@@ -27,6 +27,7 @@
     {% endblock %}
 </head>
 <body>
+    <h1>Lucas Jia</h1>
     {% block header %}
     <header class="space">
         <h1>{{ config.title }}</h1>
@@ -53,11 +54,10 @@
         </div>
         {% endif %}
         {% if blog.pages %}
-        <h2>Lucas Jia</h2>
         <p>Hi! I'm an EE undergrad at UC Santa Barbara. </p>
         <p> 
-            Currently, I'm researching LLM fine-tuning, LLMs for analog/mixed-signal circuit optimization, 
-            and ML applications in space physics. 
+            Currently, I'm researching LLM fine-tuning, LLMs for analog/mixed-signal circuit optimization, and ML applications in 
+            <a href="https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024SW004236">space physics</a>. 
         </p>
         <p><a href="{{ blog.permalink }}">Pages</a></p>
         {% endif %}
